@@ -127,6 +127,30 @@ INSERT INTO `#__categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level
 --
 -- Dumping data for table `#__citybranding_classifications`
 --
+CREATE TABLE IF NOT EXISTS `n85df_citybranding_classifications` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `asset_id` int(10) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `icon` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `ordering` int(11) NOT NULL,
+  `state` tinyint(1) NOT NULL,
+  `checked_out` int(11) NOT NULL,
+  `checked_out_time` datetime NOT NULL,
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `updated_by` int(11) NOT NULL,
+  `language` varchar(255) NOT NULL,
+  `access` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ordering` (`ordering`),
+  KEY `state` (`state`),
+  KEY `checked_out` (`checked_out`),
+  KEY `created_by` (`created_by`),
+  KEY `updated_by` (`updated_by`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
 TRUNCATE TABLE `#__citybranding_classifications`;
 INSERT INTO `#__citybranding_classifications` (`id`, `asset_id`, `title`, `icon`, `description`, `ordering`, `state`, `checked_out`, `checked_out_time`, `created`, `updated`, `created_by`, `updated_by`, `language`, `access`) VALUES
 (1, 90, 'Roman Monuments', 'cb-roman', '', 1, 1, 0, '0000-00-00 00:00:00', '2015-10-07 13:27:36', '2015-10-07 13:27:36', 64, 0, 'en-GB', 1),
