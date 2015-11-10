@@ -127,7 +127,7 @@ INSERT INTO `#__categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level
 --
 -- Dumping data for table `#__citybranding_classifications`
 --
-CREATE TABLE IF NOT EXISTS `n85df_citybranding_classifications` (
+CREATE TABLE IF NOT EXISTS `#__citybranding_classifications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) NOT NULL,
   `title` varchar(255) NOT NULL,
